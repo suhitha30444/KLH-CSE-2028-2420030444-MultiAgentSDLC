@@ -1,0 +1,24 @@
+{
+  "run_id": "ac30a371",
+  "requirement": "Write a function that reverses a string.",
+  "acceptance_criteria": [
+    {
+      "id": "AC1",
+      "text": "reverse('abc') == 'cba'"
+    },
+    {
+      "id": "AC2",
+      "text": "reverse('') == ''"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "T1",
+      "description": "Implement reverse()",
+      "addresses_criteria": [
+        "AC1",
+        "AC2"
+      ]
+    }
+  ]
+}

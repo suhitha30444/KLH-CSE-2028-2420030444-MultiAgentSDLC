@@ -1,0 +1,62 @@
+{
+  "run_id": "5b6c628a",
+  "requirement": "Build a shopping cart module: add items with a price and quantity, remove an item, apply a percentage discount code, and compute the total price.",
+  "acceptance_criteria": [
+    {
+      "id": "AC1",
+      "text": "Adding an item with a price and quantity stores it in the cart."
+    },
+    {
+      "id": "AC2",
+      "text": "Removing an existing item from the cart deletes it."
+    },
+    {
+      "id": "AC3",
+      "text": "Applying a valid percentage discount code reduces the total price by the given percent."
+    },
+    {
+      "id": "AC4",
+      "text": "Computing the total price returns the sum of (price * quantity) for all items, after any discount is applied."
+    },
+    {
+      "id": "AC5",
+      "text": "Adding an item with a non-positive price or quantity raises an error."
+    }
+  ],
+  "tasks": [
+    {
+      "id": "T1",
+      "description": "Create a Cart class with internal storage for items and discount state.",
+      "addresses_criteria": []
+    },
+    {
+      "id": "T2",
+      "description": "Implement add_item method that validates price and quantity, then stores the item.",
+      "addresses_criteria": [
+        "AC1",
+        "AC5"
+      ]
+    },
+    {
+      "id": "T3",
+      "description": "Implement remove_item method that deletes an existing item from the cart.",
+      "addresses_criteria": [
+        "AC2"
+      ]
+    },
+    {
+      "id": "T4",
+      "description": "Implement apply_discount method that accepts a percentage (0-100) and stores it for later calculations.",
+      "addresses_criteria": [
+        "AC3"
+      ]
+    },
+    {
+      "id": "T5",
+      "description": "Implement compute_total method that calculates sum(price*quantity) for all items and applies any stored discount.",
+      "addresses_criteria": [
+        "AC4"
+      ]
+    }
+  ]
+}

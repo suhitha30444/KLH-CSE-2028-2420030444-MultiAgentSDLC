@@ -1,0 +1,72 @@
+{
+  "run_id": "f79ef7ff",
+  "requirement": "Write a ShoppingCart class with add_item(name, price, qty), remove_item(name), apply_percentage_discount(percent), and get_total(). Adding an item that already exists should increase its quantity rather than duplicate it. Removing an item that doesn't exist should raise a KeyError. The discount should only apply to the current total, not stack across multiple calls. get_total() should return 0 for an empty cart.",
+  "acceptance_criteria": [
+    {
+      "id": "AC1",
+      "text": "add_item adds a new item with the specified name, price, and quantity."
+    },
+    {
+      "id": "AC2",
+      "text": "Adding an item with a name that already exists increases its quantity instead of creating a duplicate entry."
+    },
+    {
+      "id": "AC3",
+      "text": "remove_item successfully removes an existing item from the cart."
+    },
+    {
+      "id": "AC4",
+      "text": "remove_item raises a KeyError when attempting to remove an item that does not exist."
+    },
+    {
+      "id": "AC5",
+      "text": "apply_percentage_discount applies the given percentage discount to the current total."
+    },
+    {
+      "id": "AC6",
+      "text": "The discount does not stack across multiple calls; each call calculates discount based on the undiscounted total."
+    },
+    {
+      "id": "AC7",
+      "text": "get_total returns the correct total price after discounts, and returns 0 for an empty cart."
+    }
+  ],
+  "tasks": [
+    {
+      "id": "T1",
+      "description": "Create the ShoppingCart class with an appropriate internal data structure for storing items and a discount field.",
+      "addresses_criteria": []
+    },
+    {
+      "id": "T2",
+      "description": "Implement add_item(name, price, qty) to add new items and increase quantity for existing items.",
+      "addresses_criteria": [
+        "AC1",
+        "AC2"
+      ]
+    },
+    {
+      "id": "T3",
+      "description": "Implement remove_item(name) to delete items and raise KeyError if the item is not present.",
+      "addresses_criteria": [
+        "AC3",
+        "AC4"
+      ]
+    },
+    {
+      "id": "T4",
+      "description": "Implement apply_percentage_discount(percent) to set a discount based on the current total without stacking across calls.",
+      "addresses_criteria": [
+        "AC5",
+        "AC6"
+      ]
+    },
+    {
+      "id": "T5",
+      "description": "Implement get_total() to compute the total price after applying the discount, returning 0 for an empty cart.",
+      "addresses_criteria": [
+        "AC7"
+      ]
+    }
+  ]
+}

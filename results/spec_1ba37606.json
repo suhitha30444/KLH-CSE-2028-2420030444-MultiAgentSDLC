@@ -1,0 +1,68 @@
+{
+  "run_id": "1ba37606",
+  "requirement": "Write a ShoppingCart class with add_item(name, price, qty), remove_item(name), apply_percentage_discount(percent), and get_total(). Adding an item that already exists should increase its quantity rather than duplicate it. Removing an item that doesn't exist should raise a KeyError. The discount should only apply to the current total, not stack across multiple calls. get_total() should return 0 for an empty cart.",
+  "acceptance_criteria": [
+    {
+      "id": "AC1",
+      "text": "The ShoppingCart class provides methods add_item(name, price, qty), remove_item(name), apply_percentage_discount(percent), and get_total()."
+    },
+    {
+      "id": "AC2",
+      "text": "add_item adds a new item to the cart; if an item with the same name already exists, its quantity is increased by the given qty instead of creating a duplicate entry."
+    },
+    {
+      "id": "AC3",
+      "text": "remove_item raises a KeyError when attempting to remove an item that does not exist in the cart."
+    },
+    {
+      "id": "AC4",
+      "text": "apply_percentage_discount applies a discount to the current total without stacking; multiple calls do not compound discounts."
+    },
+    {
+      "id": "AC5",
+      "text": "get_total returns 0 for an empty cart and otherwise returns the total cost of items after applying the most recent discount."
+    }
+  ],
+  "tasks": [
+    {
+      "id": "T1",
+      "description": "Create project scaffolding and define the ShoppingCart class file.",
+      "addresses_criteria": []
+    },
+    {
+      "id": "T2",
+      "description": "Implement add_item method to add new items or increase quantity for existing items.",
+      "addresses_criteria": [
+        "AC2"
+      ]
+    },
+    {
+      "id": "T3",
+      "description": "Implement remove_item method with KeyError raised for nonexistent items.",
+      "addresses_criteria": [
+        "AC3"
+      ]
+    },
+    {
+      "id": "T4",
+      "description": "Implement apply_percentage_discount method ensuring discount applies only to the current total and does not stack across calls.",
+      "addresses_criteria": [
+        "AC4"
+      ]
+    },
+    {
+      "id": "T5",
+      "description": "Implement get_total method to compute total cost, apply latest discount, and return 0 for an empty cart.",
+      "addresses_criteria": [
+        "AC5"
+      ]
+    },
+    {
+      "id": "T6",
+      "description": "Verify that the ShoppingCart class includes all required methods as specified.",
+      "addresses_criteria": [
+        "AC1"
+      ]
+    }
+  ]
+}

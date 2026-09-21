@@ -1,0 +1,77 @@
+{
+  "run_id": "63b053f5",
+  "requirement": "Write a ShoppingCart class with add_item(name, price, qty), remove_item(name), apply_percentage_discount(percent), and get_total(). Adding an item that already exists should increase its quantity rather than duplicate it. Removing an item that doesn't exist should raise a KeyError. The discount should only apply to the current total, not stack across multiple calls. get_total() should return 0 for an empty cart.",
+  "acceptance_criteria": [
+    {
+      "id": "AC1",
+      "text": "Adding an item stores the item with the given name, price, and quantity."
+    },
+    {
+      "id": "AC2",
+      "text": "Adding an item that already exists increases its quantity rather than creating a duplicate entry."
+    },
+    {
+      "id": "AC3",
+      "text": "remove_item successfully removes an existing item from the cart."
+    },
+    {
+      "id": "AC4",
+      "text": "remove_item raises a KeyError when attempting to remove an item that does not exist."
+    },
+    {
+      "id": "AC5",
+      "text": "apply_percentage_discount applies a discount to the current total based on the given percent."
+    },
+    {
+      "id": "AC6",
+      "text": "Multiple calls to apply_percentage_discount do not stack; each call applies discount to the original total, not cumulatively."
+    },
+    {
+      "id": "AC7",
+      "text": "get_total returns the correct total price after items are added, removed, and discounts applied."
+    },
+    {
+      "id": "AC8",
+      "text": "get_total returns 0 for an empty cart."
+    }
+  ],
+  "tasks": [
+    {
+      "id": "T1",
+      "description": "Create ShoppingCart class and initialize internal data structures for items and discount handling.",
+      "addresses_criteria": []
+    },
+    {
+      "id": "T2",
+      "description": "Implement add_item method to add new items and increase quantity for existing items.",
+      "addresses_criteria": [
+        "AC1",
+        "AC2"
+      ]
+    },
+    {
+      "id": "T3",
+      "description": "Implement remove_item method to delete items and raise KeyError if the item is missing.",
+      "addresses_criteria": [
+        "AC3",
+        "AC4"
+      ]
+    },
+    {
+      "id": "T4",
+      "description": "Implement apply_percentage_discount method to apply a discount to the current total without stacking across calls.",
+      "addresses_criteria": [
+        "AC5",
+        "AC6"
+      ]
+    },
+    {
+      "id": "T5",
+      "description": "Implement get_total method to compute total after discounts and return 0 for an empty cart.",
+      "addresses_criteria": [
+        "AC7",
+        "AC8"
+      ]
+    }
+  ]
+}

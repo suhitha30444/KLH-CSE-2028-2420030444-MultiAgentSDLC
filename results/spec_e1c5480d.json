@@ -1,0 +1,78 @@
+{
+  "run_id": "e1c5480d",
+  "requirement": "Write a Playlist class with add_song(title, duration_seconds), remove_song(title), skip_to_next(), and total_duration(). add_song should raise a ValueError if a song with that title is already in the playlist. remove_song should raise a KeyError if the title isn’t in the playlist. skip_to_next() should return the title of the next song in the order songs were added, and wrap back around to the first song after reaching the last one. Calling skip_to_next() on an empty playlist should raise a RuntimeError. If the currently playing song is removed, the next call to skip_to_next() should still return the next remaining song without erroring. total_duration() should return the sum of all song durations, or 0 for an empty playlist.",
+  "acceptance_criteria": [
+    {
+      "id": "AC1",
+      "text": "add_song adds a new song and total_duration reflects the added duration"
+    },
+    {
+      "id": "AC2",
+      "text": "add_song raises ValueError when adding a song with a title that already exists"
+    },
+    {
+      "id": "AC3",
+      "text": "remove_song removes an existing song and total_duration updates accordingly"
+    },
+    {
+      "id": "AC4",
+      "text": "remove_song raises KeyError when the title is not present"
+    },
+    {
+      "id": "AC5",
+      "text": "skip_to_next returns the title of the next song in insertion order and wraps to the first after the last"
+    },
+    {
+      "id": "AC6",
+      "text": "skip_to_next raises RuntimeError when called on an empty playlist"
+    },
+    {
+      "id": "AC7",
+      "text": "After the currently playing song is removed, the next call to skip_to_next returns the next remaining song without error"
+    },
+    {
+      "id": "AC8",
+      "text": "total_duration returns the sum of all song durations, or 0 for an empty playlist"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "T1",
+      "description": "Create Playlist class with internal structures for song order and duration tracking",
+      "addresses_criteria": []
+    },
+    {
+      "id": "T2",
+      "description": "Implement add_song method with duplicate title check, adding song, and updating total duration",
+      "addresses_criteria": [
+        "AC1",
+        "AC2"
+      ]
+    },
+    {
+      "id": "T3",
+      "description": "Implement remove_song method with removal logic, updating total duration, raising KeyError, and handling removal of currently playing song",
+      "addresses_criteria": [
+        "AC3",
+        "AC4",
+        "AC7"
+      ]
+    },
+    {
+      "id": "T4",
+      "description": "Implement skip_to_next method that returns next song title, wraps around, raises RuntimeError on empty, and works correctly after current song removal",
+      "addresses_criteria": [
+        "AC5",
+        "AC6",
+        "AC7"
+      ]
+    },
+    {
+      "id": "T5",
+      "description": "Implement total_duration method returning sum of durations or 0 when playlist is empty",
+      "addresses_criteria": [
+        "AC8"
+      ]
+    }
+  ]
+}

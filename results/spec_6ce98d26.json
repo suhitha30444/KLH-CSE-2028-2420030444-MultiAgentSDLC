@@ -1,0 +1,62 @@
+{
+  "run_id": "6ce98d26",
+  "requirement": "Write a ShoppingCart class with add_item(name, price, qty), remove_item(name), apply_percentage_discount(percent), and get_total(). Adding an item that already exists should increase its quantity rather than duplicate it. Removing an item that doesn't exist should raise a KeyError. The discount should only apply to the current total, not stack across multiple calls. get_total() should return 0 for an empty cart.",
+  "acceptance_criteria": [
+    {
+      "id": "AC1",
+      "text": "add_item stores a new item with the specified name, price, and quantity"
+    },
+    {
+      "id": "AC2",
+      "text": "add_item increments the quantity of an existing item instead of creating a duplicate"
+    },
+    {
+      "id": "AC3",
+      "text": "remove_item deletes an existing item and raises KeyError when the item name is not in the cart"
+    },
+    {
+      "id": "AC4",
+      "text": "apply_percentage_discount reduces the current total by the given percent and does not compound when called multiple times"
+    },
+    {
+      "id": "AC5",
+      "text": "get_total returns the sum of price*quantity for all items minus any applied discount, and returns 0 when the cart is empty"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "T1",
+      "description": "Create ShoppingCart class with internal data structures",
+      "addresses_criteria": []
+    },
+    {
+      "id": "T2",
+      "description": "Implement add_item to add new items and increase quantity for existing items",
+      "addresses_criteria": [
+        "AC1",
+        "AC2"
+      ]
+    },
+    {
+      "id": "T3",
+      "description": "Implement remove_item to delete items and raise KeyError if item not found",
+      "addresses_criteria": [
+        "AC3"
+      ]
+    },
+    {
+      "id": "T4",
+      "description": "Implement apply_percentage_discount to apply a one-time discount to the current total",
+      "addresses_criteria": [
+        "AC4"
+      ]
+    },
+    {
+      "id": "T5",
+      "description": "Implement get_total to compute total after discount and return 0 for empty cart",
+      "addresses_criteria": [
+        "AC5"
+      ]
+    }
+  ]
+}

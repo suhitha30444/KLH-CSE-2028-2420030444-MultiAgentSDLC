@@ -1,0 +1,40 @@
+{
+  "run_id": "87f706f1",
+  "requirement": "Write a function is_prime(n) that returns True if n is a prime number and False otherwise. Handle n less than 2 correctly.",
+  "acceptance_criteria": [
+    {
+      "id": "AC1",
+      "text": "For any integer n less than 2, is_prime returns False."
+    },
+    {
+      "id": "AC2",
+      "text": "For prime numbers (e.g., 2,3,5,7,11), is_prime returns True."
+    },
+    {
+      "id": "AC3",
+      "text": "For composite numbers greater than or equal to 2 (e.g., 4,6,9,15), is_prime returns False."
+    }
+  ],
+  "tasks": [
+    {
+      "id": "T0",
+      "description": "Create the function stub is_prime(n) with proper signature.",
+      "addresses_criteria": []
+    },
+    {
+      "id": "T1",
+      "description": "Add a check that returns False when n is less than 2.",
+      "addresses_criteria": [
+        "AC1"
+      ]
+    },
+    {
+      "id": "T2",
+      "description": "Implement a trial-division algorithm up to sqrt(n) to determine primality, returning True for primes and False for composites.",
+      "addresses_criteria": [
+        "AC2",
+        "AC3"
+      ]
+    }
+  ]
+}

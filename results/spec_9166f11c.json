@@ -1,0 +1,82 @@
+{
+  "run_id": "9166f11c",
+  "requirement": "Write a BankAccount class with deposit(amount), withdraw(amount), get_balance(), and transfer(other_account, amount). deposit and withdraw should reject zero or negative amounts by raising a ValueError. withdraw should raise a ValueError if the amount exceeds the current balance. transfer should move money from this account to another BankAccount instance; if the transfer cannot be completed (insufficient funds or an invalid amount), neither account's balance should change at all. get_balance() should return 0 for a newly created account.",
+  "acceptance_criteria": [
+    {
+      "id": "AC1",
+      "text": "A newly created BankAccount instance returns a balance of 0 via get_balance()."
+    },
+    {
+      "id": "AC2",
+      "text": "Depositing a positive amount increases the account balance by that amount."
+    },
+    {
+      "id": "AC3",
+      "text": "Depositing zero or a negative amount raises a ValueError."
+    },
+    {
+      "id": "AC4",
+      "text": "Withdrawing a positive amount less than or equal to the current balance decreases the balance by that amount."
+    },
+    {
+      "id": "AC5",
+      "text": "Withdrawing zero or a negative amount raises a ValueError."
+    },
+    {
+      "id": "AC6",
+      "text": "Withdrawing an amount greater than the current balance raises a ValueError."
+    },
+    {
+      "id": "AC7",
+      "text": "Transferring a positive amount that does not exceed the source account balance moves the amount from the source to the target account, decreasing the source balance and increasing the target balance accordingly."
+    },
+    {
+      "id": "AC8",
+      "text": "Transferring zero or a negative amount raises a ValueError and leaves both accounts' balances unchanged."
+    },
+    {
+      "id": "AC9",
+      "text": "Transferring an amount greater than the source account balance raises a ValueError and leaves both accounts' balances unchanged."
+    }
+  ],
+  "tasks": [
+    {
+      "id": "T1",
+      "description": "Create BankAccount class with an initializer that sets the balance to 0.",
+      "addresses_criteria": []
+    },
+    {
+      "id": "T2",
+      "description": "Implement get_balance method to return the current balance.",
+      "addresses_criteria": [
+        "AC1"
+      ]
+    },
+    {
+      "id": "T3",
+      "description": "Implement deposit method that validates the amount is positive, raises ValueError otherwise, and adds the amount to the balance.",
+      "addresses_criteria": [
+        "AC2",
+        "AC3"
+      ]
+    },
+    {
+      "id": "T4",
+      "description": "Implement withdraw method that validates the amount is positive, raises ValueError otherwise, raises ValueError if amount exceeds balance, and subtracts the amount from the balance.",
+      "addresses_criteria": [
+        "AC4",
+        "AC5",
+        "AC6"
+      ]
+    },
+    {
+      "id": "T5",
+      "description": "Implement transfer method that validates the amount is positive and does not exceed the source balance, raises ValueError otherwise, and atomically moves the amount to the other BankAccount instance, leaving balances unchanged on failure.",
+      "addresses_criteria": [
+        "AC7",
+        "AC8",
+        "AC9"
+      ]
+    }
+  ]
+}
